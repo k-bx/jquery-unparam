@@ -1,0 +1,14 @@
+======================
+Jquery-Unparam library
+======================
+
+A python library to parse jquery.param() string.
+
+Can be used like this::
+
+    >>> from jquery_unparam import jquery_unparam
+    >>> request_params = u'a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B%5D=1&b%5B%5D=2&b%5B%5D=3'
+    >>> print jquery_unparam(request_params)
+    {u'a': {u'three': u'3', u'two': u'2', u'one': u'1'}, u'b': [u'1', u'2', u'3']}
+
+For jquery.param docs see http://api.jquery.com/jQuery.param/
