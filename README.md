@@ -1,8 +1,7 @@
 Jquery-Unparam library
 ======================
 
-- Bitbucket repo: https://bitbucket.org/k_bx/jquery-unparam
-- GitHub mirror: https://github.com/k-bx/jquery-unparam
+- GitHub repo: https://github.com/k-bx/jquery-unparam
 
 A python library to parse jquery.param() string.
 
