@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='jquery-unparam',
-    version='1.0.0',
+    version='2.0.0',
     url='https://bitbucket.org/k_bx/jquery-unparam/',
     license='BSD',
     author='Konstantine Rybnikov',
