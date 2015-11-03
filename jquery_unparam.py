@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import re
-from urllib import unquote_plus
+
+try:
+    from urllib import unquote_plus
+except ImportError:
+    from urllib.parse import unquote_plus
 
 def parse_key_pair(keyval):
     keyval_splitted = keyval.split('=', 1)
@@ -33,7 +37,13 @@ def merge_two_structs(s1, s2):
        isinstance(s2, dict):
         
         retval = s1.copy()
-        for key, val in s2.iteritems():
+        
+        try:
+            iteritem = s2.iteritems()
+        except AttributeError:
+            iteritem = s2.items()
+
+        for key, val in iteritem:
             if retval.get(key) is None:
                 retval[key] = val
             else:
